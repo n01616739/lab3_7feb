@@ -13,20 +13,20 @@ const iconMap = {
   invoices: InboxIcon,
 };
 
-export default async function CardWrapper() {
-  return (
-    <>
-      {/* NOTE: Uncomment this code in Chapter 9 */}
+export default function CardWrapper() {
+  // Define the values you want to pass to the cards
+  const totalPaidInvoices = 100; // example value
+  const totalPendingInvoices = 50; // example value
+  const numberOfInvoices = 150; // example value
+  const numberOfCustomers = 200; // example value
 
-      {/* <Card title="Collected" value={totalPaidInvoices} type="collected" />
+  return (
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <Card title="Collected" value={totalPaidInvoices} type="collected" />
       <Card title="Pending" value={totalPendingInvoices} type="pending" />
       <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
-      <Card
-        title="Total Customers"
-        value={numberOfCustomers}
-        type="customers"
-      /> */}
-    </>
+      <Card title="Total Customers" value={numberOfCustomers} type="customers" />
+    </div>
   );
 }
 
